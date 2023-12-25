@@ -15,7 +15,7 @@ function MovieList(props) {
     Axios.get(props.url).then((response) => {
         setMovies(response.data.results)
     });
-  },[]) 
+  },[props.url]) 
 
   const opts = {
     height: '390',
